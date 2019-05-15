@@ -57,6 +57,11 @@ module FlightStats
         URI.parse @@base_uri
       end
 
+      # @param [String] url
+      def base_uri=(url)
+        @@base_uri = url
+      end
+
       # @return [String]
       def user_agent
         "FlightStats/#{FlightStats::Version}; #{RUBY_DESCRIPTION}"
